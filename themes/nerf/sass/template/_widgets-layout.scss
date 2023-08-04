@@ -1,0 +1,117 @@
+/* block */
+.#{$block-selector} {
+    margin-bottom: $block-module-margin-bottom;
+    position: relative;
+    padding: $block-module-padding;
+    background: transparent;
+    .wp-block-group__inner-container > h1,
+    .wp-block-group__inner-container > h2,
+    .wp-block-group__inner-container > h3,
+    .wp-block-group__inner-container > h4,
+    .wp-block-group__inner-container > h5,
+    .wp-block-group__inner-container > h6{
+        margin:0 0 15px;
+        text-transform: uppercase;
+        @media(min-width: 1200px){
+            margin:0 0 20px;
+        }
+        + ul{
+            margin: 0;
+            padding-left: 0;
+            li{
+                font-size: 1rem;
+                @media(min-width: 1200px){
+                    font-size: 18px;
+                }
+                list-style: none;
+                padding: 0 0 8px;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                > a:before{
+                    vertical-align: middle;
+                    display: inline-block;
+                    content: '';
+                    @include size(0,1px);
+                    background: $theme-color;
+                    @include transition(all 0.3s ease-in-out 0s);
+                }
+                &:hover > a,
+                &.current-cat-parent > a,
+                &.current-cat > a{
+                    color:$theme-color;
+                    &:before{
+                        width: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .wp-block-group__inner-container > h2{
+        font-size: 18px;
+        @media(min-width: 1200px){
+            font-size: 20px;
+        }
+    }
+    .wc-block-price-filter__title,
+    .#{$block-heading-selector}{
+        margin:0 0 15px;
+        font-size: 18px;
+        text-transform: uppercase;
+        @media(min-width: 1200px){
+            margin:0 0 20px;
+            font-size: 20px;
+        }
+        .urgent,
+        .featured{
+            font-size: 0.75rem;
+        }
+    }
+}
+// Sidebar
+.sidebar,
+.#{$app-prefix}-sidebar {
+    .widget{
+        margin: 0 0 ($theme-margin / 2);
+        @media(min-width: 1200px){
+            margin: 0 0 35px;
+        }
+    }
+}
+@media(min-width: 1440px){
+    .has-sidebar{
+        .sidebar-right{
+            padding-left: 50px;
+        }
+        .sidebar-left{
+            padding-right: 50px;
+        }
+    }
+}
+// footer 
+[class *="apus_footer"],
+.apus-footer{
+    // widget
+    .wpml-ls-legacy-dropdown{
+        .wpml-ls-sub-menu{
+            bottom: 100%;
+            top: inherit;
+            @include translateY(-8px);
+        }
+        .wpml-ls-current-language:hover{
+            .wpml-ls-sub-menu{
+                @include translateY(0);
+            }
+        }
+        a.wpml-ls-item-toggle{
+            &:after{
+                bottom: 100%;
+                top: inherit;
+            }
+        }
+    }
+    .widget .widget-title, .widget .widgettitle, .widget .widget-heading{
+        font-size: 17px;
+    }
+}

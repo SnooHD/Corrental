@@ -1,0 +1,134 @@
+/*
+*  Responsive
+*/
+@media(min-width: 1200px){
+    .hidden-dots{
+        .slick-dots{
+            display: none;
+        }
+    }
+}
+@media(min-width: 1440px){
+    .container{
+        max-width: 1440px;
+    }
+    .row-margin-left{
+        > .elementor-container{
+            overflow: hidden;
+            width: calc( 1440px + ((100vw - 1440px) / 2) );
+            max-width: calc( 1440px + ((100vw - 1440px) / 2) ) !important;
+            left: calc( (100vw - 1440px) / 4 );
+            padding-right: calc( (100vw - 1440px) / 2);
+        }
+    }
+}
+@media (max-width: 1199px){
+    .btn-lg{
+        font-size: $font-size-base;
+        padding: $btn-padding-y $btn-padding-x;
+    }
+    .btn{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 991px){
+    
+}
+@media (max-width:767px) {
+    .row{
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        > [class *="col-"]:not(.elementor-column){
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+    .nav-tabs{
+        overflow-x: auto;
+        white-space: nowrap;
+        li{
+            float: none;
+            display: inline-block;
+            margin-bottom: 8px !important;
+        }
+    }
+    .apus-filter {
+        > *{
+            display: block;
+            width: 100%;
+            float: none !important;
+            + *{
+                margin-top: 15px;
+            }
+        }
+    }
+    .error-404 .top-image{
+        margin-top: $theme-margin;
+        img{
+            max-width: 80%;
+        }
+    }
+    .page-404 .not-found{
+        text-align: center;
+    }
+}
+@media(max-width: 990px){
+
+}
+@media(max-width: 575px){
+    .testimonials-item .d-sm-flex .avarta{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 560px){
+
+}
+@media(max-width: 479px){
+    .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > *,
+    .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > .select2-container, .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > select, .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > input{
+        width: 100% !important;
+        margin: 0 0 5px !important;
+    }
+    .woocommerce-page table.cart td.actions .coupon{
+        margin: 0;
+        .input-text{
+            padding: 5px 10px !important;
+            margin: 0;
+        }
+    }
+    .actions .update_cart{
+        width: 100%;
+        margin-top: 10px !important;
+    }
+}
+// fix admin
+.admin-bar{
+    @media(max-width: 782px){
+        &.header_transparent{
+            #apus-header{
+                top: 46px;
+            }
+        }
+        .header-mobile{
+            top: 46px;
+            &.sticky-header{
+
+            }
+        }
+    }
+}
+@media(min-width: 783px){
+    .admin-bar{
+        .header-mobile{
+            top: 32px;
+        }
+    }
+}
+@media(max-width: 600px){
+    .admin-bar{
+        .header-mobile.sticky-header{
+            top: 0;
+        }
+    }
+}
