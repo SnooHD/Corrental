@@ -1,0 +1,192 @@
+.main-page {
+	.page-links{
+		clear: both;
+		overflow: hidden;
+		padding:$theme-padding 0;
+		margin:0;
+	}
+	#comments{
+		padding-top:30px;
+		clear: both;
+	}
+}
+.main-content{
+	padding-bottom: 20px;
+	@media(min-width: 1200px){
+		padding-bottom:80px;
+	}
+	&.only_main{
+		.mobile-sidebar-btn{
+			display: none;
+		}
+	}
+}
+.home-page-default{
+	padding-top: 20px;
+	@media(min-width: 1200px){
+		padding-top:80px;
+	}
+}
+body.no-footer{
+	#apus-footer{
+		display: none !important;
+	}
+}
+body.single-post{
+	.header-mobile{
+		background: #191D23;
+	}
+}
+@media(min-width: 1440px){
+	.sidebar-blog{
+		.sidebar-right{
+			padding-left: 50px;
+		}
+		.sidebar-left{
+			padding-right: 50px;
+		}
+	}
+}
+//----------------------------------
+// layout page
+div.wpcf7-validation-errors{
+	margin: 0;
+	padding: 15px;
+}
+.contact-form-content{
+	padding: $theme-padding;
+	background: $contact-bg;
+	min-height: 260px;
+	.rounded{
+		margin-right: 10px;
+		color: $white;
+		@include size(40px,40px);
+		background: darken($body-bg, 20%);
+		.fa,.icon{
+			font-size: 16px;
+			margin: 13px;
+		}
+	}
+}
+// Page Not Found
+//----------------------------------
+.page-404{
+	position:relative;
+	background-color: #191D23;
+	color: #fff;
+	height: 100vh;
+   .not-found{
+   		padding: $theme-padding 0;
+   	}
+   	.description{
+   		font-weight: 500;
+	   	font-size: 1rem;
+	   	margin-bottom: 20px;
+	   	@media(min-width: 1200px){
+	   		font-size: 18px;
+	   		margin-bottom: 40px;
+	   	}
+   	}
+   	.title-404{
+   		color: #fff;
+	   	font-size:25px;
+	   	margin: 0 0 10px;
+	   	text-transform: uppercase;
+	   	@media(min-width: 1200px){
+	   		font-size: 44px;
+	   		margin: 0 0 15px;
+	   	}
+   	}
+   	.heading-404{
+   		color: #fff;
+	   	font-size:60px;
+	   	margin: 0 0 15px;
+	   	text-transform: uppercase;
+	   	@media(min-width: 1200px){
+	   		font-size: 160px;
+	   		margin: 0 0 25px;
+	   	}
+   	}
+}
+body.error404{
+	.apus-header{
+
+	}
+	#apus-footer{
+		display: none;
+	}
+}
+.top_profile{
+	padding:30px 30px 25px;
+	border-bottom: 1px solid #dee6ed;
+	.user-logo{
+		margin: 0 0 25px;
+	}
+	.logo-inner{
+		@include size(150px,150px);
+		padding:5px;
+		@include border-radius(50%);
+		background:#fff;
+		overflow: hidden;
+		margin:auto;
+	}
+	.title{
+		font-size: 18px;
+		margin:0;
+	}
+	.categories{
+		a{
+			color: $body-color;
+			&:hover,&:focus{
+				color: $body-link;
+			}
+		}
+	}
+}
+.sidebar-fixed{
+	@media(min-width: 992px){
+		&.p-left{
+			padding-left: 70px;
+			.sidebar-wrapper{
+				left: 0;
+			}
+		}
+		&.p-right{
+			padding-right: 70px;
+			.sidebar-wrapper{
+				right: 0;
+			}
+		}
+	}
+	.sidebar-wrapper{
+		padding: 0;
+		@include size(70px,100vh);
+		overflow: auto;
+  		scrollbar-width: thin;
+		position: fixed;
+		z-index: 8;
+		top: 0;
+		background: #fff;
+		@media(max-width: 991px){
+			display: none;
+		}
+		aside.sidebar{
+			padding: 0;
+		}
+	}
+	.main-page{
+		width: 100%;
+		padding: 0 !important;
+	}
+	.mobile-sidebar-btn{
+		display: none !important;
+	}
+	#main-container{
+		padding-right: 0;
+		padding-left: 0;
+		.row-page{
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}

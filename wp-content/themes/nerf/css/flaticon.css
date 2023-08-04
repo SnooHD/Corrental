@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "flaticon";
+  src: url("../fonts/flaticon.eot");
+  src: url("../fonts/flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/flaticon.woff2") format("woff2"),
+       url("../fonts/flaticon.woff") format("woff"),
+       url("../fonts/flaticon.ttf") format("truetype"),
+       url("../fonts/flaticon.svg#flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.svg#flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: flaticon;
+  font-style: normal;
+}
+
+.flaticon-right-arrow:before {
+    content: "\f101";
+}
+.flaticon-left-arrow:before {
+    content: "\f102";
+}
+.flaticon-down-arrow:before {
+    content: "\f103";
+}
+.flaticon-up-arrow:before {
+    content: "\f104";
+}
+.flaticon-up-right-arrow:before {
+    content: "\f105";
+}
+.flaticon-up-arrow-1:before {
+    content: "\f106";
+}
+.flaticon-right-arrow-1:before {
+    content: "\f107";
+}
+.flaticon-down-arrow-1:before {
+    content: "\f108";
+}
+.flaticon-play:before {
+    content: "\f109";
+}
+.flaticon-badge:before {
+    content: "\f10a";
+}
+.flaticon-like:before {
+    content: "\f10b";
+}
+.flaticon-map:before {
+    content: "\f10c";
+}
+.flaticon-technological:before {
+    content: "\f10d";
+}
+.flaticon-group:before {
+    content: "\f10e";
+}
+.flaticon-building:before {
+    content: "\f10f";
+}
+.flaticon-apartment:before {
+    content: "\f110";
+}
+.flaticon-leaf:before {
+    content: "\f111";
+}
+.flaticon-badge-1:before {
+    content: "\f112";
+}
+.flaticon-online-support:before {
+    content: "\f113";
+}
+.flaticon-customer-support:before {
+    content: "\f114";
+}
+.flaticon-hotel-bell:before {
+    content: "\f115";
+}
+.flaticon-home-automation:before {
+    content: "\f116";
+}
+.flaticon-customer-support-1:before {
+    content: "\f117";
+}
+.flaticon-bike:before {
+    content: "\f118";
+}
+.flaticon-swimming-pool:before {
+    content: "\f119";
+}
+.flaticon-sofa:before {
+    content: "\f11a";
+}
+.flaticon-sofa-1:before {
+    content: "\f11b";
+}
+.flaticon-pawprint:before {
+    content: "\f11c";
+}
+.flaticon-dumbbell:before {
+    content: "\f11d";
+}
+.flaticon-scale:before {
+    content: "\f11e";
+}
+.flaticon-car-parking:before {
+    content: "\f11f";
+}
+.flaticon-house-plan-scale:before {
+    content: "\f120";
+}
+.flaticon-buildings:before {
+    content: "\f121";
+}
+.flaticon-livingroom:before {
+    content: "\f122";
+}
+.flaticon-cottage:before {
+    content: "\f123";
+}
+.flaticon-blueprint:before {
+    content: "\f124";
+}
+.flaticon-convergence:before {
+    content: "\f125";
+}
+.flaticon-contract:before {
+    content: "\f126";
+}
+.flaticon-loupe:before {
+    content: "\f127";
+}
+.rtl .navigation .flaticon-left-arrow:before,
+.rtl .slick-arrow .flaticon-left-arrow:before{
+    content: "\f101";
+}
+.rtl .navigation .flaticon-right-arrow:before,
+.rtl .slick-arrow .flaticon-right-arrow:before{
+    content: "\f102";
+}
+
+.rtl .navigation .ti-angle-right:before{
+    content: "\e64a";
+}
+.rtl .navigation .ti-angle-left:before{
+    content: "\e649";
+}
+.rtl .flaticon-up-right-arrow.direction-circle:before{
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
