@@ -66,9 +66,6 @@ if ( is_page() ) {
 
 ?>
 <div id="wrapper-container" class="wrapper-container <?php echo esc_attr($addclass); ?>">
-    
-	<?php get_template_part( 'headers/mobile/offcanvas-menu' ); ?>
-	<?php get_template_part( 'headers/mobile/header-mobile' ); ?>
 
 	<?php
 		$header = apply_filters( 'nerf_get_header_layout', nerf_get_config('header_type') );

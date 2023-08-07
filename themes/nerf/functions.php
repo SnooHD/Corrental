@@ -249,6 +249,9 @@ function nerf_enqueue_styles() {
 		wp_add_inline_style( 'nerf-template', $custom_style );
 	}
 	wp_enqueue_style( 'nerf-style', get_template_directory_uri() . '/style.css', array(), '1.0' );
+
+	wp_enqueue_style( 'nerf-custom', get_template_directory_uri() . '/css/custom.css', array(), '1.0' );
+
 }
 add_action( 'wp_enqueue_scripts', 'nerf_enqueue_styles', 1000 );
 
