@@ -300,6 +300,8 @@ function nerf_enqueue_scripts() {
 	// mobile menu script
 	wp_enqueue_script( 'sliding-menu', get_template_directory_uri() . '/js/sliding-menu.min.js', array( 'jquery' ), '0.3.0', true );
 
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+
 	// main script
 	wp_register_script( 'nerf-functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 	wp_localize_script( 'nerf-functions', 'nerf_opts', array(
