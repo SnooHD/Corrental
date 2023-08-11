@@ -59,6 +59,9 @@
       pin.addEventListener("mouseover", () => {
         activateItem(id);
       });
+      pin.addEventListener("click", () => {
+        activateItem(id);
+      });
     });
 
     items.forEach((item) => {
@@ -67,6 +70,9 @@
       if (!id) return;
 
       item.addEventListener("mouseover", () => {
+        activateItem(id);
+      });
+      item.addEventListener("click", () => {
         activateItem(id);
       });
     });

@@ -449,3 +449,13 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+@media only screen and (min-width: 767px) {
+  [data-id="2029c4a"] > .elementor-container {
+    flex-direction: column;
+  }
+  [data-id="2029c4a"] .elementor-col-33,
+  [data-id="2029c4a"] .elementor-col-66 {
+    width: 100% !important;
+  }
+}
