@@ -358,10 +358,6 @@ body {
   In the area
 */
 
-[data-id="2029c4a"] {
-  max-height: calc(100vh - 40px);
-}
-
 #powerTip p {
   margin: 0;
 }
@@ -450,12 +446,22 @@ body {
   object-fit: cover;
 }
 
-@media only screen and (min-width: 767px) {
+[data-id="a66e5ac"] .row .item .item-inner-features {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1025px) {
   [data-id="2029c4a"] > .elementor-container {
     flex-direction: column;
   }
   [data-id="2029c4a"] .elementor-col-33,
   [data-id="2029c4a"] .elementor-col-66 {
     width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  [data-id="2029c4a"] {
+    max-height: calc(100vh - 40px);
   }
 }
