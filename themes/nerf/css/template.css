@@ -9794,9 +9794,14 @@ body.single-product .apus-main-content {
   font-size: 14px;
 }
 
-#powerTip:before {
+#powerTip.n:before {
   border-top: 5px solid var(--nerf-theme-color) !important;
   bottom: -5px !important;
+}
+
+#powerTip.s:before {
+  border-bottom: 5px solid var(--nerf-theme-color) !important;
+  top: -5px !important;
 }
 
 #powerTip .title {

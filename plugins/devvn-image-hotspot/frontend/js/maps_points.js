@@ -78,7 +78,7 @@
     });
 
     setTimeout(() => {
-      activateItem("bar");
-    }, 1000);
+      activateItem("beach");
+    }, 3000);
   });
 })(jQuery);

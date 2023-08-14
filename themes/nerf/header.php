@@ -14,6 +14,32 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 	<link rel="profile" href="//gmpg.org/xfn/11">
+	<?php
+if( class_exists( 'WPCF7' ) ) {
+  function inject_wpcf7() {
+    // Pages to add CF7 scripts
+    $pages_cf7_add_scripts = array( 'home' );
+
+    if( is_page( $pages_cf7_add_scripts ) ) {
+      if( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+				
+      } 
+      if( function_exists( 'wpcf7_enqueue_styles' ) ) {
+        wpcf7_enqueue_styles();
+      }
+    }
+  }
+  add_filter( 'wpcf7_load_js', '__return_false' ); // Disable CF7 JavaScript
+  add_filter( 'wpcf7_load_css', '__return_false' ); // Disable CF7 CSS
+  add_action( 'wp_enqueue_scripts', 'inject_wpcf7', 10, 3 );
+
+	// Load custom input js after WPCF7
+	add_action( 'wp_enqueue_scripts', function(){
+		wp_enqueue_script( 'custom-inputs-js', get_template_directory_uri() . '/js/customInputs.js', array( 'jquery' ), '1.0', true );
+	}, 20, 3 );
+}
+	?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
