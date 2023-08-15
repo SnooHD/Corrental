@@ -519,3 +519,50 @@ get_template_part( '/inc/vendors/one-click-demo-import/functions' );
  *
  */
 get_template_part( '/inc/custom-styles' );
+
+function disable_plugin_updates( $value ) {
+   unset( $value->response['devvn-image-hotspot/devvn-image-hotspot.php'] );
+	 unset( $value->response['revslider/revslider.php'] );
+	 unset( $value->response['sitepress-multilingual-cms/sitepress.php'] );
+   return $value;
+}
+add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+  echo '<style>
+    .plugin-title .go_pro,
+		.plugin-update-tr.installer-plugin-update-tr.js-otgs-plugin-tr {
+			display: none;
+		}
+
+		[data-plugin="elementor/elementor.php"] .plugin-title .deactivate {
+			color: transparent;
+		}
+
+		[data-plugin="elementor/elementor.php"] .plugin-title .deactivate a {
+			color: #2782ad;
+		}
+
+		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .plugin-title [class="1"]{
+			display: none;
+		}
+
+		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .plugin-title [class="0"]{
+			color: transparent;
+		}
+
+		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .plugin-title [class="0"] a{
+			color: #2782ad;
+		}
+
+		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .column-auto-updates {
+			color: transparent;
+		}
+
+		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .column-auto-updates a{
+			display: none;
+		}
+  </style>';
+}

@@ -14,7 +14,7 @@ body {
   display: block !important;
 }
 
-.home #apus-header .elementor-background-overlay {
+#apus-header.header-8-1439 .elementor-background-overlay {
   display: none;
 }
 
@@ -163,9 +163,7 @@ body {
   About
 */
 
-.elementor-60
-  .elementor-element.elementor-element-2222ea5
-  > .elementor-widget-container {
+[data-id="2222ea5"] .elementor-widget-container {
   border: none !important;
 }
 
