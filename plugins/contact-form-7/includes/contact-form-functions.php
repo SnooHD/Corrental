@@ -221,22 +221,18 @@ function wpcf7_contact_form_tag_func( $atts, $content = null, $code = '' ) {
 		return '[contact-form-7]';
 	}
 
+	
 	if ( 'contact-form-7' == $code ) {
-		$atts = shortcode_atts(
-			array(
-				'id' => '',
-				'title' => '',
-				'html_id' => '',
-				'html_name' => '',
-				'html_title' => '',
-				'html_class' => '',
-				'output' => 'form',
-			),
-			$atts, 'wpcf7'
-		);
+		$id = '';
+		if($atts['id']){
+			$id = trim( $atts['id'] );
+		}
 
-		$id = trim( $atts['id'] );
-		$title = trim( $atts['title'] );
+		$title = '';
+		if($atts['title']){
+			$title = trim($atts['title']);
+		}
+
 
 		$contact_form = wpcf7_get_contact_form_by_hash( $id );
 

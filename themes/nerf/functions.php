@@ -523,6 +523,8 @@ get_template_part( '/inc/custom-styles' );
 function disable_plugin_updates( $value ) {
    unset( $value->response['devvn-image-hotspot/devvn-image-hotspot.php'] );
 	 unset( $value->response['revslider/revslider.php'] );
+	 unset( $value->response['contact-form-7/wp-contact-form-7.php'] );
+	 unset( $value->response['contact-form-7-multilingual/plugin.php'] );
 	 unset( $value->response['sitepress-multilingual-cms/sitepress.php'] );
    return $value;
 }
@@ -565,4 +567,21 @@ function my_custom_fonts() {
 			display: none;
 		}
   </style>';
+}
+
+/**
+ * Handle custom stuff for editors
+ */
+if( is_user_logged_in() ) {
+	$user = wp_get_current_user();
+	
+	$roles = ( array ) $user->roles;
+	$length = count($roles);
+
+	if($length === 1){
+		$role = reset($roles);
+		if($role === 'editor'){
+			wp_enqueue_script( 'custom-admin', get_template_directory_uri() . '/js/customAdmin.js', array( 'jquery' ), '1.0.0', true );
+		}
+	}
 }
