@@ -10,7 +10,7 @@ const wpmlSettings = document.querySelectorAll(
   ".wpml-settings-container div, .wpml-settings-container form, .wpml-settings-container ul"
 );
 wpmlSettings.forEach((setting) => {
-  if (setting.classList.has("wpml-section-hide-languages")) return;
+  if (setting.classList.contains("wpml-section-hide-languages")) return;
 
   setting.style.display = "none";
 });
