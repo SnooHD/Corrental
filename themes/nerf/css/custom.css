@@ -590,3 +590,11 @@ body {
     justify-content: flex-start;
   }
 }
+
+/**
+* Facilities
+**/
+
+[data-id="8e4dfb0"] .item-inner-features {
+  pointer-events: none;
+}
