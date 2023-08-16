@@ -7,7 +7,7 @@ links.forEach((link) => {
 });
 
 const wpmlSettings = document.querySelectorAll(
-  ".wpml-settings-container div, .wpml-settings-container form, .wpml-settings-container ul"
+  ".wpml-settings-container > div, .wpml-settings-container > form, .wpml-settings-container > ul"
 );
 wpmlSettings.forEach((setting) => {
   if (setting.classList.contains("wpml-section-hide-languages")) return;
