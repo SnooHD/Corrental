@@ -577,6 +577,10 @@ body {
   line-height: 16px;
 }
 
+[data-id="2188386"] .navbar-collapse li a img {
+  height: 16px;
+}
+
 @media only screen and (max-width: 479px) {
   [data-id="3ee332e"] .elementor-widget-wrap {
     justify-content: flex-start !important;
