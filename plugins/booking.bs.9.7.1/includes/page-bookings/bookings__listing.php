@@ -202,7 +202,7 @@ class WPBC_AJX_Bookings {
 
 			// Rows
 			?><script type="text/html" id="tmpl-wpbc_ajx_booking_list_row">
-				<div id="row_id_{{{data.parsed_fields.booking_id}}}" class="wpbc_listing_usual_row wpbc_list_row wpbc_row">
+				<div data-lang="{{{data.parsed_fields.lang}}}" id="row_id_{{{data.parsed_fields.booking_id}}}" class="wpbc_listing_usual_row wpbc_list_row wpbc_row">
 					<div class="wpbc_listing_col wpbc_col_id check-column"><div class="content_text"><input type="checkbox" /></div></div>
 					<div class="wpbc_listing_col wpbc_col_booking_labels wpbc_col_labels">
 						<div class="content_text">

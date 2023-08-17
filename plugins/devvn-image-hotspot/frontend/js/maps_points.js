@@ -23,6 +23,9 @@
 
     let activeItem;
     const items = document.querySelectorAll('[data-id="a66e5ac"] .row .item');
+
+    if (items.length === 0) return;
+
     const pins = document.querySelectorAll(
       '[data-id="d3df568"] .wrap_svl .tips .ihotspot_hastooltop'
     );

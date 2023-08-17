@@ -566,6 +566,10 @@ function my_custom_fonts() {
 		[data-plugin="sitepress-multilingual-cms/sitepress.php"] .column-auto-updates a{
 			display: none;
 		}
+
+		.wpbc_listing_col.wpbc_col_id.check-column{
+			display: none;
+		}
   </style>';
 }
 

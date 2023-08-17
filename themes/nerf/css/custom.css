@@ -246,6 +246,10 @@ body {
   justify-content: center;
 }
 
+[name="lang2"] {
+  display: none;
+}
+
 #booking_form_div2 {
   display: flex;
   align-items: center;
@@ -337,6 +341,15 @@ body {
 
 #booking_form_div2 .payment-form textarea {
   width: 100% !important;
+}
+
+.block_hints.datepick {
+  margin-top: 10px;
+}
+
+[data-id="4f3c6f41"],
+[data-id="d8a2802"] {
+  margin-top: 0 !important;
 }
 
 /**
@@ -494,6 +507,10 @@ body {
 /**
 * Footer
 */
+
+[data-id="1331a42"] .elementor-widget-wrap {
+  justify-content: center !important;
+}
 
 [data-elementor-id="3643"] {
   background: #191d23;
