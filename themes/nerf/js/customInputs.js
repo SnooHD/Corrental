@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateValues = (e) => {
     const value = e.currentTarget.value;
-    let name = e.currentTarget.name;
+    let name = e.currentTarget.name.replace("your-", "");
     if (name.endsWith("2")) name = name.slice(0, -1);
 
     const associatedInputs = document.querySelectorAll(`[name*="${name}"]`);
