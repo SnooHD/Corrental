@@ -76,7 +76,7 @@ function wpbc_get_calendar_legend__content_html( $params ) {
 		$my_partially .= '	</div>';
 		$my_partially .= '	<div class="date-cell-content">';
 		$my_partially .= '		<div class="date-content-top"><div class="wpbc_time_dots">·</div></div>';
-		$my_partially .= '		<a>' . $params['text_for_day_cell'] . '</a>';
+		$my_partially .= '		<span>' . $params['text_for_day_cell'] . '</span>';
 		$my_partially .= '		<div class="date-content-bottom"></div>';
 		$my_partially .= '	</div>';
 		$my_partially .= '</div>';
@@ -121,7 +121,7 @@ function wpbc_get_calendar_legend__content_html( $params ) {
 
 	$items_arr = array(   'available' => array(
 											  'title'             => ( ! empty( $params['titles']['available'] ) ) ? $params['titles']['available'] : apply_bk_filter( 'wpdev_check_for_active_language', get_bk_option( 'booking_legend_text_for_item_available' ) )
-											, 'text_for_day_cell' => '<a>' . $params['text_for_day_cell'] . '</a>'
+											, 'text_for_day_cell' => '<span>' . $params['text_for_day_cell'] . '</span>'
 											, 'css_class'         => 'block_free datepick-days-cell'
 										)
 						, 'approved' => array(

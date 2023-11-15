@@ -1,0 +1,72 @@
+[2023-10-25 08:21:15.060145] [INFO] Starting migration loop - With allotted time: 26.167255163193 seconds
+[2023-10-25 08:21:15.061671] [DEBUG] Usage reporting data sent to wpsynchro.com server:
+
+Array
+(
+    [version] => 1
+    [site_hash] => 6c82c7c287d9d050a4beffdf9536d8035c30f50c
+    [lang] => en_US
+    [is_pro] => 
+    [migration_count] => 1
+    [total_migrations] => 11
+    [features_used_this_sync] => Array
+        (
+            [success_notification_email] => 1
+            [error_notification_email] => 1
+            [clear_cache_on_success] => 1
+            [sync_preset] => db_all
+            [sync_database] => 1
+            [sync_files] => 
+            [db_make_backup] => 
+            [db_table_prefix_change] => 1
+            [db_preserve_options_table_keys] => Array
+                (
+                    [0] => active_plugins
+                    [1] => blog_public
+                )
+
+            [db_preserve_options_custom] => 
+            [include_all_database_tables] => 1
+            [only_include_database_table_count] => 0
+            [searchreplaces_count] => 7
+            [file_locations_count] => 0
+            [files_exclude_files_match_count] => 3
+            [files_ask_user_for_confirm] => 
+        )
+
+)
+
+[2023-10-25 08:21:15.216818] [INFO] Initating with remote and local host with remaining time:26.010582208633
+[2023-10-25 08:21:15.219694] [DEBUG] Calling initate service for destination: local
+[2023-10-25 08:21:20.338032] [DEBUG] Got initiate token: 2c8850a0e30cf33909792a2d5b10251948dd267a94d99427686eb7eb58857461
+[2023-10-25 08:21:20.338297] [DEBUG] Calling initate service for destination: remote
+[2023-10-25 08:21:21.326183] [DEBUG] Got initiate token: 85d1ff23c4dcbacd91cc77cbf72dd0e8586f6ccacc10965e0e49c1179022f10e
+[2023-10-25 08:21:21.326473] [INFO] Initation completed on: 6.2657661437988 seconds
+[2023-10-25 08:21:21.328805] [INFO] Ending migration loop - with remaining time: 19.898595094681
+[2023-10-25 08:21:24.626203] [INFO] Starting migration loop - With allotted time: 26.158653020859 seconds
+[2023-10-25 08:21:24.627039] [INFO] Getting masterdata from source and target with remaining time:26.157814025879
+[2023-10-25 08:21:24.627410] [DEBUG] Calling masterdata service on: http://corrental-dev.local/ with intent to user as 'source'
+[2023-10-25 08:21:28.613598] [DEBUG] Calling masterdata service on: http://dev.corrental.nl/ with intent to user as 'target'
+[2023-10-25 08:21:30.099757] [INFO] Completed masterdata on: 5.472718000412 seconds
+[2023-10-25 08:21:30.117343] [INFO] Ending migration loop - with remaining time: 20.667515039444
+[2023-10-25 08:24:33.435400] [INFO] Starting migration loop - With allotted time: 26.155067920685 seconds
+[2023-10-25 08:24:33.435712] [INFO] Getting masterdata from source and target with remaining time:26.154750108719
+[2023-10-25 08:24:33.436018] [DEBUG] Calling masterdata service on: http://corrental-dev.local/ with intent to user as 'source'
+[2023-10-25 08:24:33.436900] [CRITICAL] Could not retrieve masterdata from target 'http://corrental-dev.local/', which means we can not continue the migration.
+[2023-10-25 08:24:33.437005] [DEBUG] Calling masterdata service on: http://dev.corrental.nl/ with intent to user as 'target'
+[2023-10-25 08:24:33.437145] [CRITICAL] Could not retrieve masterdata from target 'http://dev.corrental.nl/', which means we can not continue the migration.
+[2023-10-25 08:24:33.437236] [CRITICAL] Did not retrieve correct database masterdata from target 'from' - See log file
+
+Array
+(
+    [from] => Array
+        (
+        )
+
+    [to] => Array
+        (
+        )
+
+)
+
+[2023-10-25 08:24:33.451018] [INFO] Ending migration loop - with remaining time: 26.139446973801

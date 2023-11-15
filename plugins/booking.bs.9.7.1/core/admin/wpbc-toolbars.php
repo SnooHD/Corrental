@@ -1606,7 +1606,7 @@ function wpbc_datepicker_css(){
 			margin-top: 2px;
             width: <?php echo $width  ?>px !important;
         }
-        #datepick-div .datepick .datepick-days-cell a{
+        #datepick-div .datepick .datepick-days-cell div{
             font-size: 12px;
         }
         #datepick-div table.datepick tr td {

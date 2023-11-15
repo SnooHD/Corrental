@@ -532,9 +532,9 @@ class WPBC_TimelineFlex {
                                     };
         </script>
         <div class="flex_tl_nav">
-            <div class="flex_tl_prev" href="javascript:void(0)" onclick="javascript:wpbc_flextimeline_nav( wpbc_timeline_obj['<?php echo  $this->html_client_id; ?>'], -1 );"><a>&laquo;</a></div>
+            <div class="flex_tl_prev" href="javascript:void(0)" onclick="javascript:wpbc_flextimeline_nav( wpbc_timeline_obj['<?php echo  $this->html_client_id; ?>'], -1 );"><span>&laquo;</span></div>
             <div class="flex_tl_title"><?php echo $param['title'] ?></div>
-            <div class="flex_tl_next" href="javascript:void(0)" onclick="javascript:wpbc_flextimeline_nav( wpbc_timeline_obj['<?php echo  $this->html_client_id; ?>'],  1 );"><a>&raquo;</a></div>
+            <div class="flex_tl_next" href="javascript:void(0)" onclick="javascript:wpbc_flextimeline_nav( wpbc_timeline_obj['<?php echo  $this->html_client_id; ?>'],  1 );"><span>&raquo;</span></div>
         </div>
        <?php 
     }
