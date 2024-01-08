@@ -1,0 +1,50 @@
+.ovabrw-card4 {
+	&.ovabrw-card-template {
+		.ovabrw-card-header {
+			.ovabrw-features-featured {
+				padding: 12px 30px;
+				font-size: 18px;
+				font-weight: 500;
+				top: auto;
+				bottom: -24px;
+			}
+		}
+
+		.ovabrw-card-content {
+			padding: 32px 15px 35px;
+
+			.ovabrw-review {
+				margin-bottom: 5px;
+			}
+
+			.ovabrw-title {
+				margin-bottom: 3px;
+			}
+
+			.ovabrw-price {
+				font-family: var(--ovabrw-primary-font);
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				margin-bottom: 30px;
+
+				.amount {
+					color: var(--ovabrw-primary-color);
+				}
+
+				.unit {
+					color: var(--ovabrw-text-color);
+				}
+			}
+
+			.ovabrw-attributes {
+				margin-bottom: 28px;
+			}
+
+			.ovabrw-short-description {
+				margin-bottom: 28px;
+			}
+		}
+	}
+}

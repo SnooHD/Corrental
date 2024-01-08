@@ -1,0 +1,62 @@
+.ovabrw-card2 {
+	&.ovabrw-card-template {
+		.ovabrw-card-header {
+			.ovabrw-gallery-popup {
+				.ovabrw-gallery-slideshow {
+					.owl-dots {
+						right: 0;
+						left: auto;
+						margin: 0 15px 15px 0;
+					}
+				}
+			}
+
+			.ovabrw-price {
+				right: auto;
+				left: 15px;
+			}
+		}
+
+		.ovabrw-card-content {
+			h2.ovabrw-title + .ovabrw-review {
+				margin-top: -24px;
+			}
+
+			.ovabrw-review {
+				margin-bottom: 25px;
+			}
+
+			.ovabrw-features {
+				margin: 0 0 35px;
+				grid-template-columns: 1fr 1fr 1fr;
+
+				.item-feature {
+					display: flex;
+					flex-direction: column;
+
+					i {
+						margin: 0;
+					}
+				}
+			}
+
+			.ovabrw-attributes {
+				margin: 0 0 16px;
+			}
+
+			.ovabrw-custom-taxonomy {
+				& + .ovabrw-attributes {
+					margin-top: -12px;
+				}
+			}
+
+			.ovabrw-short-description {
+				margin-bottom: 28px;
+			}
+
+			.ovabrw-button {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

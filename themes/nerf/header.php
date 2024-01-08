@@ -37,6 +37,7 @@ if( class_exists( 'WPCF7' ) ) {
 	// Load custom input js after WPCF7
 	add_action( 'wp_enqueue_scripts', function(){
 		wp_enqueue_script( 'custom-inputs-js', get_template_directory_uri() . '/js/customInputs.js', array( 'jquery' ), '1.0', true );
+		wp_enqueue_script( 'custom-calendar-js', get_template_directory_uri() . '/js/customCalendar.js', array( 'jquery' ), '1.0', true );
 	}, 20, 3 );
 }
 	?>

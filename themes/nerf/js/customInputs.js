@@ -34,4 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .getAttribute("lang")
     .replace("-", "_");
   langInput.value = language;
+
+  // Add coupon to booking
+  const couponInput = document.querySelector(
+    '.wpdev-form-control-wrap [name^="coupon"]'
+  );
+  couponInput.setAttribute("hidden", "true");
+  const urlParams = new URLSearchParams(window.location.search);
+  const couponParam = urlParams.get("coupon");
+
+  if (couponParam) {
+    couponInput.value = couponParam;
+  }
 });

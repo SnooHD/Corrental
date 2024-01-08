@@ -1,0 +1,90 @@
+.ovabrw-card3 {
+	&.ovabrw-card-template {
+		.ovabrw-card-header {
+			.ovabrw-gallery-popup {
+				.ovabrw-gallery-slideshow {
+					.owl-dots {
+						left: 50%;
+    					transform: translate(-50%, 0);
+						margin: 0 0 15px 0;
+					}
+				}
+			}
+		}
+
+		.ovabrw-card-content {
+			padding: 23px 15px 30px;
+
+			.ovabrw-title + .ovabrw-review {
+				margin-top: -24px;
+			}
+
+			.ovabrw-review {
+				margin-bottom: 32px;
+			}
+
+			.ovabrw-features {
+				margin: 0 0 35px;
+				grid-template-columns: 1fr 1fr 1fr;
+
+				.item-feature {
+					display: flex;
+					flex-direction: column;
+
+					i {
+						margin: 0;
+					}
+				}
+
+				@media only screen and (max-width: 500px) {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			.ovabrw-attributes {
+				margin: 0 0 16px;
+			}
+
+			.ovabrw-custom-taxonomy {
+				& + .ovabrw-attributes {
+					margin-top: -12px;
+				}
+			}
+
+			.ovabrw-short-description {
+				margin-bottom: 28px;
+			}
+
+			.ovabrw-card-btn {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+
+				.ovabrw-price {
+					font-family: var(--ovabrw-primary-font);
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					color: var(--ovabrw-primary-color);
+
+					.unit {
+						font-size: 14px;
+					}
+				}
+
+				.ovabrw-button {
+					border-color: var(--ovabrw-heading-color);
+					color: var(--ovabrw-heading-color);
+
+					&:hover {
+						border-color: var(--ovabrw-primary-color);
+						background-color: var(--ovabrw-primary-color);
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+}

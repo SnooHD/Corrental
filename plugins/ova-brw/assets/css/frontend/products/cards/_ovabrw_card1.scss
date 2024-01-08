@@ -1,0 +1,19 @@
+.ovabrw-card1 {
+	&.ovabrw-card-template {
+		.ovabrw-card-content {
+			.ovabrw-review {
+				.ovabrw-review-link {
+					display: none;
+				}
+			}
+
+			.ovabrw-card-btn {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}

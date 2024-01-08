@@ -4,7 +4,7 @@
      * Booking
      **/
 
-    if (!document.querySelector("#booking_form_div2")) return;
+    if (!document.querySelector(".booking_form_div")) return;
 
     // Select the node that will be observed for mutations
     const targetNodes = document.querySelectorAll(
@@ -18,13 +18,18 @@
     const callback = (mutationList, observer) => {
       for (const mutation of mutationList) {
         if (mutation.type === "childList") {
-          console.log(mutation.target);
-          const errorElement = mutation.target.querySelector(".alert");
-          console.log(errorElement);
-          if (errorElement) {
+          const errorElement =
+            mutation.target.querySelector(".wpbc_fe_message_warning") ||
+            mutation.target.querySelector(".wpbc_fe_message_error");
+
+          if (!errorElement) continue;
+
+          const isVisible = getComputedStyle(errorElement).display !== "none";
+          console.log(isVisible);
+          if (isVisible) {
             setTimeout(() => {
               document
-                .querySelector("#booking_form_div2 .loader")
+                .querySelector(".booking_form_div .loader")
                 .classList.remove("active");
             }, 0);
           }
@@ -41,10 +46,10 @@
     });
 
     document
-      .querySelector('#booking_form_div2 input[type="button"]')
+      .querySelector('.booking_form_div input[type="button"]')
       .addEventListener("click", () => {
         document
-          .querySelector("#booking_form_div2 .loader")
+          .querySelector(".booking_form_div .loader")
           .classList.add("active");
       });
   });

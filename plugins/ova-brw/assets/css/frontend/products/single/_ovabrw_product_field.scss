@@ -1,0 +1,318 @@
+.ovabrw-modern {
+	.ovabrw-product-fields {
+		input[type=text], input[type=number], input[type=email], input[type=tel], input[type=url], input[type=password], input[type=search], select {
+			width: 100%;
+			max-width: 100%;
+			height: 45px;
+			padding: 10px 13px 13px 14px;
+			border: 1px solid var(--ovabrw-light-color) !important;
+			border-radius: 5px;
+			background-color: #FFF;
+			box-shadow: none;
+			@include ovabrw-text;
+
+			&::placeholder {
+				color: var(--ovabrw-light-color);
+			}
+
+			&:focus {
+				outline: none;
+				background-color: #FFF;
+			}
+
+			&.ovabrw_datetimepicker {
+				background-image: url(../../../assets/img/calendar.svg);
+			    background-position: calc(100% - 10px) center;
+			    background-repeat: no-repeat;
+			    background-size: 20px;
+			}
+		}
+
+		select {
+			position: relative;
+			-moz-appearance:none;
+	    	-webkit-appearance:none;
+	    	appearance:none;
+		    background-image: url(../../../assets/img/down-arrow.svg);
+		    background-position: calc(100% - 10px) center;
+		    background-repeat: no-repeat;
+		    background-size: 20px;
+		}
+
+		textarea {
+			width: 100%;
+			height: 140px;
+			max-width: 100%;
+			border-radius: 5px;
+			padding: 10px 13px 13px 14px;
+			border: 1px solid var(--ovabrw-light-color) !important;
+			background-color: #FFF;
+			box-shadow: none;
+			@include ovabrw-text;
+
+			&:focus {
+				outline: none;
+				background-color: #FFF;
+			}
+
+			&::placeholder {
+				color: var(--ovabrw-light-color);
+			}
+		}
+
+		.ovabrw-radio {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 30px;
+
+			.ovabrw-label-field {
+				display: block;
+				position: relative;
+				padding-left: 30px;
+				margin-bottom: 8px;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				font-size: var(--ovabrw-text-size);
+				font-weight: var(--ovabrw-text-weight);
+				line-height: var(--ovabrw-text-line-height);
+
+				input {
+					position: absolute;
+					opacity: 0;
+					cursor: pointer;
+					width: 0;
+					height: 0;
+				}
+
+				.checkmark {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 20px;
+					width: 20px;
+					background-color: #FFF;
+					border-radius: 100%;
+					border: 1px solid var(--ovabrw-light-color);
+					@include ovabrw-transition( all, .3s , ease );
+
+					&:after {
+						content: "";
+						position: absolute;
+						display: none;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 7px;
+						height: 7px;
+						border-radius: 100%;
+						background-color: #FFF;
+					}
+				}
+
+				&:hover {
+					input ~ .checkmark {
+						background-color: var(--ovabrw-primary-color);
+						border-color: var(--ovabrw-primary-color);
+					}
+				}
+
+				input:checked ~ .checkmark {
+				  	background-color: var(--ovabrw-primary-color);
+				  	border-color: var(--ovabrw-primary-color);
+
+				  	&:after {
+					  	display: block;
+					}
+				}
+			}
+
+			.ovabrw-qty-control {
+				display: none;
+			}
+		}
+
+		.ovabrw-checkbox {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 3px;
+			min-height: 30px;
+
+			.ovabrw-label-field {
+				display: block;
+				position: relative;
+				padding-left: 30px;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				font-size: var(--ovabrw-text-size);
+				font-weight: var(--ovabrw-text-weight);
+				line-height: var(--ovabrw-text-line-height);
+
+				input {
+					position: absolute;
+					opacity: 0;
+					cursor: pointer;
+					height: 0;
+					width: 0;
+				}
+
+				.checkmark {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 20px;
+					width: 20px;
+					background-color: #FFF;
+					border-radius: 2px;
+					border: 1px solid var(--ovabrw-light-color);
+					@include ovabrw-transition( all, .3s , ease );
+
+					&:after {
+						content: "";
+						position: absolute;
+						display: none;
+						left: 50%;
+					    top: 40%;
+					    width: 4px;
+					    height: 10px;
+						border: solid white;
+						border-width: 0 2px 2px 0;
+						-webkit-transform: translate(-50%, -50%) rotate(45deg);
+						-ms-transform: translate(-50%, -50%) rotate(45deg);
+						transform: translate(-50%, -50%) rotate(45deg);
+					}
+				}
+
+				&:hover {
+					input ~ .checkmark {
+						background-color: var(--ovabrw-primary-color);
+						border-color: var(--ovabrw-primary-color);
+					}
+				}
+
+				input:checked ~ .checkmark {
+				  	background-color: var(--ovabrw-primary-color);
+				  	border-color: var(--ovabrw-primary-color);
+
+				  	&:after {
+					  	display: block;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.ovabrw-modern-file {
+			.ovabrw-label-field {
+				display: block;
+				position: relative;
+				cursor: pointer;
+				width: 100%;
+
+				input {
+					position: absolute;
+					opacity: 0;
+					width: 0;
+					height: 0;
+				}
+
+				.ovabrw-file-name {
+					max-width: 100%;
+					max-height: 45px;
+					padding: 10px 35px 13px 14px;
+					border-radius: 5px;
+					border: 1px solid #D9D9D9;
+					background-color: #FFF;
+					overflow: hidden;
+					@include ovabrw-text;
+
+					.placeholder {
+						color: var(--ovabrw-light-color)
+					}
+
+					.name {
+						display: none;
+						max-width: 100%;
+						overflow: hidden;
+						height: 20px;
+					}
+				}
+
+				i {
+					position: absolute;
+					top: 50%;
+					right: 13px;
+					transform: translate(0, -50%);
+	    			font-size: 18px;
+				}
+			}
+		}
+
+		.rental_item {
+			&.ovabrw-fullwidth {
+				grid-column: 1/span 2;
+
+				@media only screen and (max-width: 768px) {
+					grid-column: 1/span 1;
+				}
+			}
+
+			.description {
+				@include ovabrw-text;
+				font-style: italic;
+				margin: 0 0 20px;
+			}
+		}
+	}
+}
+
+body.rtl {
+	&.ovabrw-modern {
+		.ovabrw-product-fields {
+			input {
+				&.ovabrw_datetimepicker {
+					background-position: 10px center;
+				}
+			}
+
+			select {
+				background-position: 10px center;
+			}
+
+			.ovabrw-label-field {
+				padding-left: 0;
+				padding-right: 30px;
+
+				.checkmark {
+					right: 0;
+				}
+			}
+
+			.ovabrw-modern-file {
+				.ovabrw-label-field {
+					padding: 0;
+
+					i {
+						right: auto;
+						left: 13px;
+
+					}
+
+					.ovabrw-file-name {
+						padding-right: 13px;
+						padding-left: 35px;
+					}
+				}
+			}
+		}
+	}
+}

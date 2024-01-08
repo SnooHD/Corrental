@@ -241,26 +241,252 @@ body {
   Calendar
 */
 
-#booking_form2 {
+.booking_form {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-[name="lang2"] {
-  display: none;
+.datepick-days-cell .date-content-bottom {
+  opacity: 0;
+  user-select: none;
 }
 
-#booking_form_div2 {
+.datepick-days-cell.pre_check_in_time.datepick-days-cell-over,
+.datepick-days-cell.pre_check_out_time.datepick-days-cell-over,
+.datepick-days-cell.pre_check_in_time.datepick-current-day,
+.datepick-days-cell.pre_check_out_time.datepick-current-day {
+  background: none !important;
+}
+
+.datepick-days-cell.pre_check_in_time.datepick-days-cell-over
+  .wpbc-cell-box
+  .wpbc-diagonal-el,
+.datepick-days-cell.pre_check_out_time.datepick-days-cell-over
+  .wpbc-cell-box
+  .wpbc-diagonal-el,
+.datepick-days-cell.pre_check_in_time.datepick-current-day
+  .wpbc-cell-box
+  .wpbc-diagonal-el,
+.datepick-days-cell.pre_check_out_time.datepick-current-day
+  .wpbc-cell-box
+  .wpbc-diagonal-el {
+  display: block !important;
+}
+
+.datepick-days-cell.pre_check_out_time.datepick-days-cell-over
+  .wpbc-cell-box
+  .wpbc-diagonal-el
+  .wpbc-co-out
+  polygon,
+.datepick-days-cell.pre_check_in_time.datepick-days-cell-over
+  .wpbc-cell-box
+  .wpbc-diagonal-el
+  .wpbc-co-in
+  polygon {
+  fill: #aaa;
+}
+
+.datepick-days-cell.pre_check_in_time.datepick-current-day
+  .wpbc-cell-box
+  .wpbc-diagonal-el
+  .wpbc-co-in
+  polygon,
+.datepick-days-cell.pre_check_out_time.datepick-current-day
+  .wpbc-cell-box
+  .wpbc-diagonal-el
+  .wpbc-co-out
+  polygon {
+  fill: #555;
+}
+
+.booking_form_div,
+.booking_form_div > .wpbc_booking_form_structure {
+  width: 100%;
+  max-width: 690px;
+}
+
+.datepick-inline {
+  user-select: none;
+}
+
+.datepick-inline .datepick-header {
+  pointer-events: none;
+  background: transparent !important;
+  margin: 0 !important;
+}
+
+.datepick-inline .calendar-links {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+.datepick-inline .datepick-one-month {
+  padding: 0 !important;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.datepick-inline .datepick-one-month:hover {
+  z-index: 3;
+}
+
+.datepick-inline .datepick.wpbc_calendar {
+  pointer-events: auto;
+}
+
+.datepick-inline {
+  background: #4d4d4d !important;
+}
+
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  .datepick-days-cell-over
+  .wpbc_time_dots,
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  td.datepick-days-cell-over
+  a:hover,
+.datepick-inline .datepick-one-month .datepick td.datepick-days-cell-over a,
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  .datepick-current-day
+  .wpbc_time_dots,
+.datepick-inline .datepick-one-month .datepick .datepick-current-day a {
+  color: #fff !important;
+  text-shadow: 0 0 3px #555 !important;
+}
+
+.datepick-inline .datepick-one-month .datepick td,
+.datepick-inline .datepick-one-month .datepick td {
+  overflow: visible !important;
+  position: relative;
+  z-index: 99999;
+}
+
+.datepick-inline .datepick-one-month .datepick td .datetime_balloon {
+  position: absolute;
+  z-index: 99999;
+  width: auto;
+  transform: translateX(-50%) translateY(-10px);
+  bottom: 100%;
+  left: 50%;
+  color: #555;
+  user-select: none;
+  font-weight: 400;
+  text-align: left;
+}
+
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  td
+  .datetime_balloon
+  .datetime_balloon_wrapper {
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  td
+  .datetime_balloon
+  .datetime_balloon_title {
+  width: 100%;
+  text-align: center;
+}
+
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  td
+  .datetime_balloon
+  .datetime_balloon_row_value {
+  padding-left: 1em;
+  white-space: nowrap;
+}
+
+.datepick-inline .datepick-one-month .datepick td .datetime_balloon table {
+  border: 0;
+  margin: 0;
+}
+
+.datepick-inline .datepick-one-month .datepick td .datetime_balloon td {
+  border: 0;
+  padding: 0;
+}
+
+.datepick-inline .datepick-one-month .datepick td .datetime_balloon:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border: 10px solid transparent;
+  filter: drop-shadow(0px 1px 0px #555);
+  border-top: 10px solid #fff;
+  border-bottom: 0px;
+  left: 50%;
+  transform: translateY(-1px) translateX(-50%);
+}
+
+.datepick-inline
+  .datepick-one-month
+  .datepick
+  td
+  .datetime_balloon
+  strong:first-of-type {
+  text-align: center;
+}
+
+.booking_form .form-control {
+  border-width: 0 0 1px !important;
+  border-color: #181d24 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.booking_form .wpcf7-form-control-wrap {
+  display: block;
+}
+
+.booking_form .wpdev-form-control-wrap,
+.booking_form .wpdev-form-control-wrap input:not([hidden="true"]) {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.lang2,
+.coupon2 {
+  display: none !important;
+}
+
+.booking_form_div {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-#booking_form_div2 .wpbc_booking_form_structure {
+.wpbc_front_end__message_container_right,
+.wpbc_front_end__message_container_left {
+  margin-left: 0 !important;
+}
+
+.booking_form_div .wpbc_booking_form_structure {
   position: relative;
 }
 
-#booking_form_div2 .loader {
+.booking_form_div .loader {
   position: absolute;
   top: 0;
   left: 0;
@@ -279,12 +505,12 @@ body {
   background: rgba(255, 255, 255, 0.6);
 }
 
-#booking_form_div2 .loader.active {
+.booking_form_div .loader.active {
   opacity: 1;
   pointer-events: auto;
 }
 
-#booking_form_div2 .ajax-loader {
+.booking_form_div .ajax-loader {
   display: none;
 }
 
@@ -332,14 +558,14 @@ body {
   }
 }
 
-#booking_form_div2 .wpcf7-form {
+.booking_form_div .wpcf7-form {
   display: flex;
   flex-direction: column;
   align-self: stretch;
   margin-top: 30px;
 }
 
-#booking_form_div2 .payment-form textarea {
+.booking_form_div .payment-form textarea {
   width: 100% !important;
 }
 

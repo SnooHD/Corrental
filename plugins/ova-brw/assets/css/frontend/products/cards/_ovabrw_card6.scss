@@ -1,0 +1,139 @@
+.ovabrw-card6 {
+	&.ovabrw-card-template {
+		display: flex;
+		flex-direction: row;
+
+		.ovabrw-card-header {
+			max-width: 40%;
+			flex: 0 0 40%;
+
+			.ovabrw-gallery-popup, .ovabrw-gallery-slideshow, .owl-stage-outer, .owl-stage, .owl-item, .item {
+				height: 100%;
+
+				img {
+					object-fit: cover;
+    				object-position: center;
+				}
+			}
+
+			.ovabrw-gallery-popup {
+				.ovabrw-gallery-slideshow {
+					.owl-dots {
+						left: 50%;
+    					transform: translate(-50%, 0);
+						margin: 0 0 15px 0;
+					}
+				}
+			}
+		}
+
+		.ovabrw-card-content {
+			flex: 0 0 60%;
+			border-top-width: 1px;
+			padding: 15px 28px 34px 30px;
+
+			.ovabrw-card-content-head {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 30px;
+
+				.ovabrw-title {
+					margin: 0;
+				}
+
+				.ovabrw-review {
+					.ovabrw-review-link {
+						display: none;
+					}
+				}
+			}
+
+			.ovabrw-features {
+				grid-template-columns: 1fr 1fr 1fr;
+				margin: 0 0 25px;
+
+				.item-feature {
+					i {
+						color: var(--ovabrw-primary-color);
+					}
+				}
+
+				@media only screen and (max-width: 500px) {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			.ovabrw-short-description {
+				margin-bottom: 22px;
+			}
+
+			.ovabrw-attributes {
+				margin: 0 0 22px;
+			}
+
+			.ovabrw-custom-taxonomy {
+				& + .ovabrw-attributes {
+					margin-top: -12px;
+				}
+			}
+
+			.ovabrw-card-btn {
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				border-top: 1px solid #EBEBEB;
+				padding-top: 34px;
+
+				.ovabrw-price {
+					.amount {
+						font-family: var(--ovabrw-primary-font);
+						font-size: 30px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 34px;
+						color: var(--ovabrw-primary-color);
+					}
+
+					.unit {
+						font-family: var(--ovabrw-primary-font);
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						color: var(--ovabrw-text-color);
+
+						&:first-of-type {
+							display: block;
+							font-size: var(--ovabrw-text-size);
+							font-weight: var(--ovabrw-text-weight);
+							line-height: var(--ovabrw-text-line-height);
+							color: var(--ovabrw-text-color);
+						}
+					}
+				}
+
+				.ovabrw-button {
+					height: auto;
+					padding: 12px 30px;
+					font-size: 18px;
+					background-color: var(--ovabrw-primary-color);
+					color: #FFF;
+
+					i {
+						display: none;
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			flex-direction: column;
+
+			.ovabrw-card-header, .ovabrw-card-content {
+				max-width: 100%;
+				flex: auto;
+			}
+		}
+	}
+}
