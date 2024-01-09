@@ -27,6 +27,18 @@
       },
     };
 
+    let isChangingBooking = false;
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookingHashParam = urlParams.get("booking_hash");
+
+    if (
+      (window.location.href.includes("my-booking") && bookingHashParam) ||
+      (window.location.href.includes("wp-admin") && bookingHashParam)
+    ) {
+      isChangingBooking = true;
+      document.querySelector(".cost_hint").remove();
+    }
+
     const lang = document.querySelector("html").getAttribute("lang");
     const language = lang.split("-")[0];
     const translations = allTranslations[language];
@@ -43,7 +55,7 @@
     const getTotalCostFromElements = (elements) => {
       const textFromElements = elements.slice(0, -1).map((elem) => {
         const currency = elem.querySelector(".date-content-bottom").textContent;
-        return parseFloat(currency.replace(/[€.\s]+/g, "").replace(",", "."));
+        return parseFloat(currency.replace("€", "").replace(",", "."));
       });
 
       const totalCosts = textFromElements.reduce((prev, cur) => prev + cur, 0);
@@ -102,7 +114,7 @@
         `;
       }
 
-      if (totalCost) {
+      if (totalCost && !isChangingBooking) {
         content += `
           <table>
             <tbody>
@@ -249,6 +261,19 @@
           ".datepick-one-month table.datepick td.datepick-days-cell.full_day_booking"
         ),
       ];
+
+      // check if selected days have correct check in and check out layout
+      const selectedCells = [
+        ...document.querySelectorAll(
+          ".datepick-one-month table.datepick td.datepick-current-day"
+        ),
+      ];
+      if (selectedCells.length > 1) {
+        selectedCells[0].classList.add("pre_check_in_time");
+        selectedCells[selectedCells.length - 1].classList.add(
+          "pre_check_out_time"
+        );
+      }
 
       calendarCells.forEach((elem, _index) => {
         elem.addEventListener("mouseenter", (event) =>

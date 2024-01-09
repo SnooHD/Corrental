@@ -406,6 +406,7 @@ class wpdev_bk_personal   {
 
                 $my_booking_id_type = wpbc_hash__get_booking_hash__resource_id( $booking_id );
                 $my_edited_bk_hash = '';
+                $my_boook_type = '';
                 if ($my_booking_id_type !== false) {
                     $my_edited_bk_hash    = $my_booking_id_type[0];
                     $my_boook_type        = $my_booking_id_type[1];
@@ -415,6 +416,15 @@ class wpdev_bk_personal   {
                 } else {
                 	$edit_url_for_visitors = '';
                 	$url_bookings_listing_by_customer = '';																//FixIn: 8.1.3.5.1
+                }
+
+
+                if ($my_boook_type) {
+                    $meta_data = wpbc_get_resource_meta( $my_boook_type, 'coupons' );
+                    if ( count( $meta_data ) > 0 ) {  
+                        $coupons = maybe_unserialize( $meta_data[0]->value );  
+                        $edit_url_for_visitors .= '&coupon='.$coupons[0]['coupon_code'];
+                    }
                 }
 
                 $mail_body = str_replace('[visitorbookingediturl]', $edit_url_for_visitors /*'<a href= "'.$edit_url_for_visitors.'" >' . __('Edit booking' ,'booking') . '</a>' */ , $mail_body);

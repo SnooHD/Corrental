@@ -1,4 +1,4 @@
-body {
+body:not(.wp-admin) {
   padding: 20px !important;
 }
 
@@ -305,6 +305,14 @@ body {
 .booking_form_div > .wpbc_booking_form_structure {
   width: 100%;
   max-width: 690px;
+}
+
+.wpbc_after_booking_thank_you_section
+  .wpbc_ty__container
+  .wpbc_ty__content
+  .wpbc_ty__content_text
+  h4 {
+  margin: 0 auto !important;
 }
 
 .datepick-inline {
